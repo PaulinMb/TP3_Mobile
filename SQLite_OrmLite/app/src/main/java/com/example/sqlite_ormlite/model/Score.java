@@ -1,4 +1,4 @@
-package com.example.sqlite_ormlite;
+package com.example.sqlite_ormlite.model;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
@@ -18,6 +18,7 @@ public class Score {
     }
 
     public Score(User user, int score, Date when) {
+        super();
         this.user = user;
         this.score = score;
         this.when = when;

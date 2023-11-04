@@ -1,4 +1,4 @@
-package com.example.sqlite_ormlite;
+package com.example.sqlite_ormlite.model;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
@@ -14,8 +14,14 @@ public class User {
     @DatabaseField
     private String lastName;
 
-    @DatabaseField
+    @DatabaseField(unique = true)
     private String email;
+
+    @DatabaseField
+    private String pays;
+
+    @DatabaseField
+    private String motdepasse;
 
     public User() {}
 
@@ -23,6 +29,8 @@ public class User {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.motdepasse = getMotdepasse();
+        this.pays = getPays();
     }
 
     public int getIdUser() {
@@ -57,8 +65,24 @@ public class User {
         this.email = email;
     }
 
+    public String getPays() {
+        return pays;
+    }
+
+    public void setPays(String pays) {
+        this.pays = pays;
+    }
+
+    public String getMotdepasse() {
+        return motdepasse;
+    }
+
+    public void setMotdepasse(String motdepasse) {
+        this.motdepasse = motdepasse;
+    }
+
     @Override
     public String toString() {
-        return "(" + firstName + " " + lastName + ")";
+        return "(" + firstName + " " + lastName +" " + pays+ ")";
     }
 }

@@ -1,3 +1,54 @@
 <resources>
     <string name="app_name">SQLite_OrmLite</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <!-- Inscription -->
+    <string name="inscrit_titre_reussie">Inscription réussie</string>
+    <string name="inscrit_text_reussie">Un nouveau compte à été ajouté !</string>
+    <string name="inscrit_titre_echec">Échec de l\'inscription</string>
+    <string name="inscrit_text_echec">Un des champs n\'est pas valide. Veuillez recommencer</string>
+    <string name="inscrit_titre_existe">Compte existant</string>
+    <string name="inscrit_text_existe">Un utilisateur possède déjà ces données. Veuillez recommencer</string>
+    <string name="inscrit_titre_courriel">Courriel existant</string>
+    <string name="inscrit_text_courriel">Un utilisateur possède déjà cette adresse courriel. Veuillez recommencer</string>
+
+    <string name="inscrit_change_prenom">Le prénom doit contenir plus de 2 caractères alphabétiques</string>
+    <string name="inscrit_change_nom">Le nom doit contenir plus de 2 caractères alphabétiques</string>
+    <string name="inscrit_change_courriel">Un courriel de la forme : \'exemple@courriel.ca\'</string>
+    <string name="inscrit_change_motdepasse">Le mot de passe doit contenir plus de 5 caractères\n
+        Il doit y figurer une MAJUSCULE, minuscule, un chiffre et un caractère spécial\n
+        Exemple : \'motDE9@5$3\' </string>
+
+    <!-- Connexion -->
+    <string name="connect_titre_echec"> Échec de conexion</string>
+    <string name="connect_text_echec"> Un des champs n\'est pas valide ou le compte n\'existe pas. Veuillez recommencer</string>
+    <string name="connect_change_courriel">Adresse Courriel non valide</string>
+    <string name="connect_change_motdepasse">Le mot de passe doit contenir plus de 5 caractères </string>
+    <!-- Jeu -->
+    <string name="titre_jeu"> Jeu Activité</string>
+    <string name="lblTitle"> Entrez une valeur entre 1 et 100:</string>
+    <string name="strGreater"> Veuillez saisir une valeur supérieure.</string>
+    <string name="strLower"> Veuillez saisir une valeur inférieure.</string>
+    <string name="strCongratulations"> Toutes nos félicitations</string>
+    <string name="strMessage"> Félicitations, vous gagnez aprés % d essais. Voulez-vous réessayer?</string>
+    <string name="sauvegarde_score"> Votre score à été sauvegarder avec succès</string>
+    <string name="sauvegarde_pb"> Un problème est survenu lors de la sauvegarde de score</string>
+
+    <!-- Scores -->
+    <string name="text_score">Tableau des scores</string>
+    <!-- Boutons -->
+    <string name="strYes">Oui</string>
+    <string name="strNo">Non</string>
+    <string name="btnCompare"> Comparer</string>
+    <string name="btnRetour_score"> Retour</string>
+    <string name="inscrit_bouton">Continuer</string>
+
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_resultats">ResultatsActivity</string>
 </resources>
