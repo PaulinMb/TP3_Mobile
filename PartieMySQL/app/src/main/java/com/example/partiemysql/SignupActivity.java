@@ -102,7 +102,7 @@ public class SignupActivity extends MainActivity {
         params.add("motdepasse",password);
         params.add("pays",pays);
 
-        WebReq.post(context, "api.php", params, new ResponseHandler());
+        WebReq.post(context, "http://127.0.0.1/androidApp/api.php", params, new ResponseHandler());
     }
     /***
      * Set le spinner de pays

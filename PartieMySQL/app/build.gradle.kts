@@ -36,6 +36,7 @@ dependencies {
     implementation ("com.android.support:support-annotations:27.1.1")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation ("com.android.support.test:runner:1.0.2")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation ("com.loopj.android:android-async-http:1.4.9")
     implementation ("com.squareup.picasso:picasso:2.5.2")

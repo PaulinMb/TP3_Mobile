@@ -1,4 +1,5 @@
 USE tp3_mobile;
+
 CREATE TABLE `user` (
 	`user_id` INT(11) NOT NULL AUTO_INCREMENT,
 	`nom` VARCHAR(255) NULL DEFAULT NULL COLLATE 'utf8_unicode_ci',

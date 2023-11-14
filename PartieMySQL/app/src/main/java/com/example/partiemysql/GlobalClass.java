@@ -5,7 +5,7 @@ package com.example.partiemysql;
 import android.app.Application;
 
 public class GlobalClass extends Application {
-    public static final String BASE_URL = "http://10.0.2.2:8888/app/";
+    public static final String BASE_URL = "http://127.0.0.1/androidApp/api.php";
 //    public static final String BASE_URL = "http:/localhost:8888/androidApp/api.php";
 
     private static GlobalClass singleton;
