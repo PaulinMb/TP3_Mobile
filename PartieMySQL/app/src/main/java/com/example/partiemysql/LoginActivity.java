@@ -76,7 +76,7 @@ public class LoginActivity extends MainActivity {
         params.add("courriel",email);
         params.add("motdepasse",password);
         Log.d("Login Parameters",params+"");
-        WebReq.post(context, "http://127.0.0.1/androidApp/api.php", params, new ResponseHandler());
+        WebReq.post(context, "api.php", params, new ResponseHandler());
     }
 
     private class ResponseHandler extends JsonHttpResponseHandler {
