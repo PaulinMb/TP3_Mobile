@@ -110,20 +110,19 @@ public class DatabaseManager extends OrmLiteSqliteOpenHelper {
      * @param userId
      * @param newScore
      */
-    public void updateScore( int userId,int newScore ) {
+    public void updateScore(int userId, int newScore) {
         try {
-            Dao<Score, Integer> dao = getDao( Score.class );
+            Dao<Score, Integer> dao = getDao(Score.class);
             UpdateBuilder<Score, Integer> updateScore = dao.updateBuilder();
 
-            updateScore.where().eq("user_idUser",userId);
+            updateScore.where().eq("user_idUser", userId);
             updateScore.updateColumnValue("score", newScore);
-            updateScore.update();
-            updateScore.updateColumnValue("when", new Date());
+            updateScore.updateColumnValue("when", new Date()); // Update the date in the same call
             updateScore.update();
 
-            Log.i( "DATABASE", "updateScore invoked" );
-        } catch( Exception exception ) {
-            Log.e( "DATABASE", "Can't update score into Database", exception );
+            Log.i("DATABASE", "updateScore invoked");
+        } catch (Exception exception) {
+            Log.e("DATABASE", "Can't update score into Database", exception);
         }
     }
 
@@ -144,12 +143,22 @@ public class DatabaseManager extends OrmLiteSqliteOpenHelper {
 
     public List<Score> readScores() {
         try {
-            Dao<Score, Integer> dao = getDao( Score.class );
+            Dao<Score, Integer> dao = getDao(Score.class);
             List<Score> scores = dao.queryBuilder().orderByRaw("`score` ASC").query();
-            Log.i( "DATABASE", "readScores invoked" );
+            Log.i("DATABASE", "readScores invoked. Number of scores: " + scores.size());
             return scores;
-        } catch( Exception exception ) {
-            Log.e( "DATABASE", "Can't read scores from Database", exception );
+        } catch (Exception exception) {
+            Log.e("DATABASE", "Can't read scores from Database", exception);
+            return null;
+        }
+    }
+
+    public List<Score> getAllScoresOrderedByScore() {
+        try {
+            Dao<Score, Integer> dao = getDao(Score.class);
+            return dao.queryBuilder().orderBy("score", true).query();
+        } catch (Exception exception) {
+            Log.e("DATABASE", "Can't get scores from Database", exception);
             return null;
         }
     }

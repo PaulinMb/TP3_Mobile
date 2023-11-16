@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
 
         //Set Pays et nomPays
         setArraylistsPays();
-
     }
 
     private void initialiserJoueurPref() {

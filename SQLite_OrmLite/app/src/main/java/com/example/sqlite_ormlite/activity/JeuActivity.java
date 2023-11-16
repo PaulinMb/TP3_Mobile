@@ -156,4 +156,9 @@ public class JeuActivity extends MainActivity {
         }
     };
 
+    public void showTableauDesScores(View view){
+        Intent intent = new Intent(this, ScoresActivity.class);
+        startActivity(intent);
+    }
+
 }

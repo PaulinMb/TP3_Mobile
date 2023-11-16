@@ -39,7 +39,7 @@ public class ScoresActivity extends MainActivity {
         binding.buttonRetour.setText(R.string.btnRetour_score);
         binding.buttonRetour.setOnClickListener(view -> {
             finish();
-            Intent connAct = new Intent(this, ConnexionActvity.class);
+            Intent connAct = new Intent(this, JeuActivity.class);
             startActivity(connAct);
         });
 
@@ -52,6 +52,7 @@ public class ScoresActivity extends MainActivity {
 
         GetScoreAdapter adapter = new GetScoreAdapter(this, scores,drawsPays, listNomsPays);
         binding.layoutScores.setAdapter(adapter);
+        System.out.println(scores);
 
         databaseManager.close();
     }

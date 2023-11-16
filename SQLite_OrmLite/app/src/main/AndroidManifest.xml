@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SQLite_OrmLite">
         <activity
+            android:name=".activity.ScoresListActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.InscriptionActivity"
             android:exported="false" />
         <activity
