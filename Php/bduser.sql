@@ -10,5 +10,4 @@ CREATE TABLE `user` (
 	PRIMARY KEY (`user_id`) USING BTREE
 )
 COLLATE='utf8_unicode_ci'
-ENGINE=InnoDBuser
 ;

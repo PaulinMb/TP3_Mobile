@@ -14,7 +14,7 @@ public class WebReq {
     static{
         //create object of loopj client
         //443 will save you from ssl exception
-        client = new AsyncHttpClient(true,3306,4433);
+        client = new AsyncHttpClient(true,8888,4433);
     }
 
     // you can create post methods as well similar way
