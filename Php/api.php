@@ -1,7 +1,7 @@
 <?php 
 // step 1: connect to database
 // mysqli_connect function has 4 params (host,user name, password,database_name)
-$db_con = mysqli_connect("%","tp3User","abc123","tp3_mobile");
+$db_con = mysqli_connect("localhost","tp3User","abc123","tp3_mobile");
 $response = array();
 header('Content-Type: application/json');
 if(mysqli_connect_errno())
